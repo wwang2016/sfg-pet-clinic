@@ -2,6 +2,7 @@ package guru.springframework.sftpetclinic.model;
 
 public class Person {
 
+
     private String firsName;
     private String lastName;
 
