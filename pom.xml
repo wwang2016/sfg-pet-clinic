@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>guru.springframework</groupId>
-	<artifactId>sft-pet-clinic</artifactId>
+	<artifactId>sfg-pet-clinic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>sft-pet-clinic</name>
+	<name>sfg-pet-clinic</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
