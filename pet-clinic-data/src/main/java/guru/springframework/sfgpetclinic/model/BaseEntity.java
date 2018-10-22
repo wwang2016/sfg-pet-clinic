@@ -26,4 +26,6 @@ public class BaseEntity implements Serializable {
     {
         return this.id == null;
     }
+
+
 }
