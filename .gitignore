@@ -1,3 +1,18 @@
+.gitignore.arch
+pet-clinic-data/src/main/java/META-INF/
+pet-clinic-web/src/main/java/META-INF/
+.project
+.settings/
+pet-clinic-data/.classpath
+pet-clinic-data/target
+
+pet-clinic-web/.classpath
+pet-clinic-web/target
+
+
+
+
+
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
