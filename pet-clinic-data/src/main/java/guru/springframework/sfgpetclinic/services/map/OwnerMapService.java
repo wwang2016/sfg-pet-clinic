@@ -14,60 +14,56 @@ import java.util.Set;
 @Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
-    private final PetTypeService petTypeService;
-    private final PetService petService;
+  private final PetTypeService petTypeService;
+  private final PetService petService;
 
+  public OwnerMapService(PetTypeService petTypeService, PetService petService) {
+    this.petTypeService = petTypeService;
+    this.petService = petService;
+  }
 
-    public OwnerMapService(PetTypeService petTypeService, PetService petService) {
-        this.petTypeService = petTypeService;
-        this.petService = petService;
-    }
+  @Override
+  public Owner findByLastName(String lastName) {
 
+    return this.findAll()
+        .stream()
+        .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+        .findFirst()
+        .orElse(null);
+  }
 
-    @Override
-    public Owner findByLastName(String lastName) {
+  @Override
+  public List<Owner> findAllByLastNameLike(String lastName) {
 
-        return this.findAll()
-                .stream()
-                .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
-                .findFirst()
-                .orElse(null);
+    return null;
+  }
 
-    }
+  @Override
+  public Set<Owner> findAll() {
 
-    @Override
-    public List<Owner> findAllByLastNameLike(String lastName) {
+    return super.finaAll();
+  }
 
-        return null;
-    }
+  @Override
+  public Owner findById(Long id) {
+    return super.findById(id);
+  }
 
-    @Override
-    public Set<Owner> findAll() {
+  @Override
+  public Owner save(Owner object) {
 
-        return super.finaAll();
-    }
+    return super.save(object);
+  }
 
-    @Override
-    public Owner findById(Long id)
-    {
-        return super.findById(id);
-    }
+  @Override
+  public void delete(Owner object) {
 
-    @Override
-    public Owner save(Owner object) {
+    super.delete(object);
+  }
 
-        return super.save(object);
-    }
+  @Override
+  public void deleteById(Long id) {
 
-    @Override
-    public void delete(Owner object) {
-
-        super.delete(object);
-    }
-
-    @Override
-    public void deleteById(Long id) {
-
-        super.deleteById(id);
-    }
+    super.deleteById(id);
+  }
 }

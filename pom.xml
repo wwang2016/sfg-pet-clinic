@@ -56,9 +56,30 @@
 				<configuration>
 					<goals>install</goals>
 				</configuration>
-
-
 			</plugin>
+			
+			<plugin>
+			  <artifactId>maven-checkstyle-plugin</artifactId>
+			  <version>2.1.7</version>
+			  <executions>
+			    <execution>
+			      <phase>valiation</phase>
+			        <goals>
+			          <goal>check</goal>
+			        </goals>
+			        <configuration>
+			          <failesOnError>true</failesOnError>
+			          <configLocation>google-checks.xml</configLocation>
+			          <consoleOutput>true</consoleOutput>
+			        </configuration>
+			        
+			     
+			    </execution>
+			  </executions>
+			
+			</plugin>
+			
+			
 		</plugins>
 	</build>
 

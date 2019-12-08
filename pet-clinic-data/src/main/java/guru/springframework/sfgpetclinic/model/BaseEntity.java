@@ -18,14 +18,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class BaseEntity implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    public boolean isNew()
-    {
-        return this.id == null;
-    }
-
-
+  public boolean isNew() {
+    return this.id == null;
+  }
 }
