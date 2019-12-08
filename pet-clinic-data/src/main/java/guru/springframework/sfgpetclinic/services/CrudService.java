@@ -2,6 +2,13 @@ package guru.springframework.sfgpetclinic.services;
 
 import java.util.Set;
 
+/**
+ * 
+ * @author internet
+ *
+ * @param <T>
+ * @param <ID>
+ */
 public interface CrudService<T, ID> {
   Set<T> findAll();
 
